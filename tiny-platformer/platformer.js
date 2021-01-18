@@ -81,11 +81,11 @@
   // UPDATE LOOP
   //-------------------------------------------------------------------------
 
-  function onkey(key, down) {
+  function onkey(ev, key, down) {
     switch(key) {
-      case KEY.LEFT:  player.left  = down; break;
-      case KEY.RIGHT: player.right = down; break;
-      case KEY.SPACE: player.jump  = down; break;
+      case KEY.LEFT:  player.left  = down; ev.preventDefault(); return false;
+      case KEY.RIGHT: player.right = down; ev.preventDefault(); return false;
+      case KEY.SPACE: player.jump  = down; ev.preventDefault(); return false;
     }
   }
   
@@ -372,8 +372,8 @@
     requestAnimationFrame(frame, canvas);
   }
   
-  document.addEventListener('keydown', function(ev) { return onkey(ev.keyCode, true);  }, false);
-  document.addEventListener('keyup',   function(ev) { return onkey(ev.keyCode, false); }, false);
+  document.addEventListener('keydown', function(ev) { return onkey(ev, ev.keyCode, true);  }, false);
+  document.addEventListener('keyup',   function(ev) { return onkey(ev, ev.keyCode, false); }, false);
 
   get("level.json", function(req) {
     setup(JSON.parse(req.responseText));
