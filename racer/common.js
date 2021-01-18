@@ -97,7 +97,7 @@ if (!window.requestAnimationFrame) { // http://paulirish.com/2011/requestanimati
 // GAME LOOP helpers
 //=========================================================================
 
-var Game = {  // a modified version of the game loop from my previous boulderdash game
+var Game = {  // a modified version of the game loop from my previous boulderdash game - see http://codeincomplete.com/posts/2011/10/25/javascript_boulderdash/#gameloop
 
   run: function(options) {
 
@@ -150,7 +150,7 @@ var Game = {  // a modified version of the game loop from my previous boulderdas
       var name = names[n];
       result[n] = document.createElement('img');
       Dom.on(result[n], 'load', onload);
-      result[n].src = name + ".png";
+      result[n].src = "images/" + name + ".png";
     }
   },
 
