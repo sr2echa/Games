@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Javascript Breakout </title>
+  <link rel="shortcut icon" href="../images/favicon.b59955c6040c5682e3402f0d72dea53f4894d24f12eb58aacabca77cec478790.ico">
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-21073988-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script></head>
+<body>
+  <link href="breakout/styles.css" media="screen, print" rel="stylesheet" type="text/css" /> 
+
+  <div id="breakout">
+    <div id="back">
+      <a href='../articles/javascript-breakout.1.html'>... back to article</a>
+    </div>
+    <canvas id="canvas">
+      <div class='unsupported'>
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </div>
+    </canvas>
+    <div id="levels">
+      <img id="next" class="disabled" src="breakout/images/up.png"   title="next level">
+      <img id="prev" class="disabled" src="breakout/images/down.png" title="previous level">
+      <span id="label">level:</span><span id="level"></span>
+    </div>
+    <div id="controls">
+      <input id='sound' type='checkbox' />
+      <label for='sound'>sound</label>
+    </div>
+    <div id="instructions" style='display:none;'>
+      <div class='keyboard'>
+        <b>space</b> to start<br>
+        <b>left/right</b> to move paddle<br>
+        <b>up/down</b> to change level
+      </div>
+      <div class='touch'>
+        <b>touch here</b> to start<br>
+        <b>drag</b> paddle to move<br>
+      </div>
+    </div>
+  </div>
+
+  <script src="breakout/game.js"></script>
+  <script src="breakout/breakout.js"></script>
+  <script src="breakout/levels.js"></script>
+  <script>
+  Game.ready(function() {
+    var game = Game.start('canvas', Breakout);
+  });
+  </script>
+</body>
+</html>
