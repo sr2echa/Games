@@ -13,8 +13,6 @@ body {
 /**************************/
 
 #gauntlet       { margin: 1em auto; position: relative; background: black; }
-#article        { text-decoration: none; color: #CCCCFF; position: absolute; font-size: 1.25em padding: 0px; margin: 0px; left: -7em; top: 0em; }
-#article:hover  { text-decoration: underline; color: #FFFFFF; }
 #booting        { position: absolute; width: 6%; left: 30%; top: 40%;      } 
 #splash         { position: absolute; display: none; }
 #canvas         { display: inline-block; vertical-align: top; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
