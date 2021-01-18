@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE html> 
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Javascript Pong </title>
-  <link rel="shortcut icon" href="../../../images/favicon.b59955c6040c5682e3402f0d72dea53f4894d24f12eb58aacabca77cec478790.ico">
-  <script>
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', 'UA-21073988-1', 'auto');
-  ga('send', 'pageview');
-  </script>
-  <script async src='https://www.google-analytics.com/analytics.js'></script></head>
-<body>
-  <link href="../styles.css" media="screen, print" rel="stylesheet" type="text/css" /> 
+  <title>Pong!</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+  <link href="../pong.css" media="screen, print" rel="stylesheet" type="text/css" /> 
+</head> 
+ 
+<body> 
 
   <div id="sidebar">
 
-    <ul class='back'>
-      <li><a href='../../../articles/javascript-pong/part1.1.html'>... back to article</a></li>
-    </ul>
+    <h2>This is Pong!</h2>
 
     <ul class='parts'>
-      <li><a href='../part1.1.html' class='selected'><i>game runner</i> - Part 1</a></li>
-      <li><a href='../part2.1.html'><i>bouncing ball</i> - Part 2</a></li>
-      <li><a href='../part3.1.html'><i>game loop</i> - Part 3</a></li>
-      <li><a href='../part4.1.html'><i>collision detection</i> - Part 4</a></li>
-      <li><a href='../part5.1.html'><i>computer AI</i> - Part 5</a></li>
-      <li><a href='../../pong.html'>Full Game</a></li>
+      <li><a href='/'>Full Game</a></li>
+      <li><a href='/part1' class='selected'><i>game runner</i> - Part 1</a></li>
+      <li><a href='/part2'><i>bouncing ball</i> - Part 2</a></li>
+      <li><a href='/part3'><i>game loop</i> - Part 3</a></li>
+      <li><a href='/part4'><i>collision detection</i> - Part 4</a></li>
+      <li><a href='/part5'><i>computer AI</i> - Part 5</a></li>
     </ul>
 
     <div class='description'>
@@ -56,5 +47,6 @@
     var pong = Game.start('game', Pong);
   });
   </script>
-</body>
+
+</body> 
 </html>

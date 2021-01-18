@@ -88,7 +88,7 @@ Pong = {
       this.color   = "rgb(" + Math.round(Game.random(0,255)) + ", " + Math.round(Game.random(0,255)) + ", " + Math.round(Game.random(0,255)) + ")";
     },
 
-    update: function(dt) {
+    update: function(dt, leftPaddle, rightPaddle) {
 
       this.x = this.x + (this.dx * dt);
       this.y = this.y + (this.dy * dt);
