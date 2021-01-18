@@ -18,9 +18,6 @@ body {
 #booting { position: absolute; width: 6%; left: 47%; top: 47%;      } 
 #canvas  { display: inline-block; width: 100%; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; }
 
-#article        { text-decoration: none; color: #CCCCFF; position: absolute; font-size: 1.5em padding: 0px; margin: 0px; left: -8em; top: 3em; line-height: 1em; }
-#article:hover  { text-decoration: underline; color: #FFFFFF; }
-
 h1         { margin: 0px; font-weight: bold;   color: white; display: block; width: 100%; text-align: center; vertical-align: center; z-index: 1; position: absolute;           }
 h2         { margin: 0px; font-weight: normal; color: white; display: block; width: 100%; text-align: center; vertical-align: center; z-index: 1; position: absolute; top: 8em; }
 h1#title   { font-size: 10em; }
