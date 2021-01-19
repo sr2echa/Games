@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Geo')
+
+*
+*:before
+*:after
+  margin: 0
+  padding: 0
+  
+body
+  background: #222
+  font-family: Sans-serif
+  
+#game
+  border: 2px solid rgba(224,224,224,1)
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  
+canvas
+  display: block
+  border: 2px solid rgba(224,224,224,1)
+
+.control-panel
+  display: flex
+  justify-content: space-between
+  
+.logo-container
+  width: 32px
+  height: @width
+  border: 2px solid rgba(224,224,224,1)
+  
+
+$logo-color = rgba(139,195,74,1)
+.logo
+  width:  4px
+  height: @width
+  margin: @width
+  box-shadow: 10px 5px 0 $logo-color, 15px 10px 0 $logo-color, 5px 15px 0 $logo-color, 10px 15px 0 $logo-color, 15px 15px 0 $logo-color
+
+.ctrl-button
+  font-size: 18px
+  font-family: 'Geo', sans-serif
+  color: rgba(224,224,224,1)
+  text-decoration: none
+  text-transform: uppercase
+  display: block
+  line-height: 32px
+  border: 2px solid rgba(224,224,224,1)
+  text-align: center
+  // padding: 0 8px
+  flex: 1
+  
+  &:hover
+    background: rgba(224,224,224,1)
+    
+    &#ctrl_1
+      color: rgba(236,64,122,1)
+    
+    &#ctrl_2
+      color: rgba(104,159,56,1)
+      
+    &#ctrl_3
+      color: rgba(0,172,193,1)
+    
+.info
+  &-panel
+    font-size: 16px
+    font-family: 'Geo', sans-serif
+    background: rgba(224,224,224,1)
+    color: rgba(33,33,33,1)
+    line-height: 24px
+    padding: 0 8px
+    cursor: default
+    text-align: center
+    display: flex
+    justify-content: space-between
+    
+    span
+      display: block
+    
+  &_generation
+    color: rgba(104,159,56,1)
+  
+  &_life-cell
+    color: rgba(236,64,122,1)
+  
+  &_speed
+    color: rgba(0,172,193,1)
+  
+.separator
+  margin: 0 8px
+
+#game
+  float: left

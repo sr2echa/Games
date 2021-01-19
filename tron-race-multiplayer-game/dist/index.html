@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - tron race multiplayer game</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+  <script>
+    var socket = io('https://tronio.herokuapp.com/');
+  </script>
+  <canvas id='canvas'></canvas>
+  <a href="https://github.com/dividead">github</a> 
+  <span> || </span>
+  <a href="https://twitter.com/Ux3F3A">twitter</a>
+<span> || </span>
+<span> control with arrows </span>
+<span> || </span>
+<span> avoid other players (blue lines) </span>
+<span> || </span>
+<span> backend on heroku can be  offline sometimes </span>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Geo");
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #222;
+  font-family: Sans-serif;
+}
+#game {
+  border: 2px solid #e0e0e0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+canvas {
+  display: block;
+  border: 2px solid #e0e0e0;
+}
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+}
+.logo-container {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #e0e0e0;
+}
+.logo {
+  width: 4px;
+  height: 4px;
+  margin: 4px;
+  box-shadow: 10px 5px 0 #8bc34a, 15px 10px 0 #8bc34a, 5px 15px 0 #8bc34a, 10px 15px 0 #8bc34a, 15px 15px 0 #8bc34a;
+}
+.ctrl-button {
+  font-size: 18px;
+  font-family: 'Geo', sans-serif;
+  color: #e0e0e0;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  line-height: 32px;
+  border: 2px solid #e0e0e0;
+  text-align: center;
+  flex: 1;
+}
+.ctrl-button:hover {
+  background: #e0e0e0;
+}
+.ctrl-button:hover#ctrl_1 {
+  color: #ec407a;
+}
+.ctrl-button:hover#ctrl_2 {
+  color: #689f38;
+}
+.ctrl-button:hover#ctrl_3 {
+  color: #00acc1;
+}
+.info-panel {
+  font-size: 16px;
+  font-family: 'Geo', sans-serif;
+  background: #e0e0e0;
+  color: #212121;
+  line-height: 24px;
+  padding: 0 8px;
+  cursor: default;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.info-panel span {
+  display: block;
+}
+.info_generation {
+  color: #689f38;
+}
+.info_life-cell {
+  color: #ec407a;
+}
+.info_speed {
+  color: #00acc1;
+}
+.separator {
+  margin: 0 8px;
+}
+#game {
+  float: left;
+}

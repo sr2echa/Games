@@ -1,0 +1,35 @@
+body {
+  background: #EEE;
+  color: #999;
+  margin: 0;
+  padding: 10px 0px 20px;
+  font-family: "Orbitron", "Helvetica", sans-serif;
+  text-align: center;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+a, a:visited, a:active {
+  color: #666;
+  text-decoration: none;
+}
+a:hover, a:visited:hover, a:active:hover {
+  color: #222;
+}
+
+.container h2 {
+  margin: 10px 0;
+  color: #999;
+  font-size: 18px;
+}
+
+#game {
+  position: relative;
+  max-width: 85vw;
+  max-height: 75vh;
+  margin: 20px auto 40px;
+  left: -10px;
+}
+#game canvas {
+  border: 10px solid white;
+}
