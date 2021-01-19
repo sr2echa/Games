@@ -1,0 +1,645 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4f569f+0,1a2f55+100 */
+  background: #4f569f; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #4f569f 0%, #1a2f55 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #4f569f 0%,#1a2f55 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #4f569f 0%,#1a2f55 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f569f', endColorstr='#1a2f55',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-image: url('../bg.jpg');
+  background-size: cover;
+}
+
+.svg-defs {
+  /* Can't do display: none; http://stackoverflow.com/questions/25799770 */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.top-bar {
+    height: 10vh;
+    color: white;
+    position: relative;
+    border-bottom: 2px solid white;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.top-bar__title {
+    position: absolute;
+    top: 0;
+    left: 15vw;
+    width: 70vw;
+    text-align: center;
+    font-size: 7.5vh;
+    vertical-align: middle;
+    color: white;
+    overflow: hidden;
+}
+
+.message-success {
+  color: lime !important;
+  fill: lime !important;
+}
+
+.message-failure {
+  color: orange !important;
+  fill: orange !important;
+}
+
+.message-progress {
+  color: yellow !important;
+  fill: yellow !important;
+}
+
+
+.top-bar__menu-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vh;
+    height: 10vh;
+}
+.top-bar__menu-button > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-bar {
+    height: 8vh;
+    color: white;
+    position: relative;
+    border-top: 2px solid white;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.interface-button,
+.interface-button-nohover {
+    background: none;
+    border: none;
+    padding: 2vh;
+    margin: 0;
+}
+.interface-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.interface-button > svg text {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  text-anchor: middle;
+  fill: white;
+}
+
+/* SVG element classes */
+
+.svg-interface-button {
+    fill: white;
+    stroke: none;
+    cursor: pointer;
+}
+.svg-interface-button-stroke {
+    /* fill not none, so elements are easily clickable */
+    fill: rgba(255, 255, 255, 0.2);
+    stroke: none;
+    cursor: pointer;
+}
+
+/* alternatively, some hitbox layer */
+.svg-interface-button-stroke:hover {
+    fill: rgba(152, 230, 152, 0.3);
+}
+
+.speed:hover > rect.svg-interface-button {
+  fill: rgba(152, 230, 152, 1) !important;
+}
+
+.svg-interface-text {
+    fill: white;
+    cursor: default;
+}
+.svg-interface-box-stroke {
+    stroke: none;
+    fill: rgba(255, 255, 255, 0.2);
+}
+
+.detection-bar-box-stroke {
+    stroke: white;
+    stroke-width: 2px;
+    fill: rgba(255, 255, 255, 0.2);
+}
+
+.view--hidden {
+  display: none !important;
+}
+
+.view--block {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Level selector */
+
+.view--level-selector {
+  font-size: 12px;
+}
+
+.level-selector {
+  padding: 10px;
+  height: 82vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.level-selector > ul {
+  list-style: none;
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 0;
+  color: #ddd;
+}
+
+.level-selector > ul > li {
+  padding-left: 1em;
+  text-indent: -1em;
+  list-style: none;
+  font-size: 3vh;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.level-selector > ul > li:before {
+  content: "\269B";
+  padding-right: 5px;
+}
+
+.level-selector > ul > li:hover {
+  color: #fff;
+}
+
+/* Encyclopedia selector */
+
+.encyclopedia-selector {
+  height: 82%;
+  overflow-y: auto;
+}
+
+.encyclopedia-selector > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #ddd;
+}
+
+.encyclopedia-selector > ul > li {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  padding: 1vh;
+  overflow: hidden;
+}
+
+.encyclopedia-selector > ul > li button {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.encyclopedia-selector > ul > li svg {
+  width: 6vh;
+  height: 6vh;
+  background: white;
+  border: 2px solid #ddd;
+  margin-right: 2vw;
+  float: left;
+}
+
+.encyclopedia-selector > ul > li h4 {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 2.5vh;
+  line-height: 2.5vh;
+  overflow: hidden;
+  height: 8vh;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Encyclopedia item */
+
+.encyclopedia-item {
+  height: 82%;
+}
+
+.encyclopedia-item__container {
+  width: 100vh;
+  max-width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 2.5vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.encyclopedia-item__container > article {
+  height: 100%;
+  overflow-y: auto;
+  padding: 3vh;
+  margin-left: 30%;
+  box-sizing: border-box;
+  text-align: center;
+  background: white;
+}
+.encyclopedia-item__container > ul {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.encyclopedia-item__container > ul li {
+  list-style: none;
+}
+.encyclopedia-item__container > ul li button {
+  background: none;
+  border: none;
+  padding: 2vh 1vh;
+  width: 100%;
+}
+
+.encyclopedia-item__container > article svg.big-tile {
+  width: 30vh;
+}
+
+.encyclopedia-item__hint {
+  font-size: 0.8em;
+  color: #333;
+
+}
+.encyclopedia-item__container svg.transition-heatmap {
+  width: 70%;
+  height: 70%;
+}
+
+/* Game */
+
+#game {
+    width: 100%;
+    height: 100%;
+    /* Allow <svg> to be 100% height */
+    font-size: 0;
+}
+#game > svg.blink-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: translateZ(0);
+}
+#game > svg.blink-svg.hidden {
+  display: none;
+}
+#game > svg.game-svg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+#game > canvas {
+    position: fixed;
+    z-index: 4;
+    cursor: pointer;
+}
+#game > canvas.canvas--helper,
+#game > canvas.canvas--hidden {
+  z-index: -1;
+  visibility: hidden;
+}
+
+.board-controls {
+    fill: #111;
+    stroke: none;
+}
+
+.title-bar .hidden {
+    display: none;
+}
+
+@-webkit-keyframes glowing  {
+  0% { fill-opacity: 0; }
+  50% { fill-opacity: 0.5; }
+  100% { fill-opacity: 0; }
+}
+@-moz-keyframes glowing {
+  0% { fill-opacity: 0; }
+  50% { fill-opacity: 0.5; }
+  100% { fill-opacity: 0; }
+}
+@-o-keyframes glowing {
+  0% { fill-opacity: 0; }
+  50% { fill-opacity: 0.5; }
+  100% { fill-opacity: 0; }
+}
+@keyframes glowing  {
+  0% { fill-opacity: 0; }
+  50% { fill-opacity: 0.5; }
+  100% { fill-opacity: 0; }
+}
+
+.title-bar .next-level > circle.glowing {
+  fill: rgb(0, 255, 0);
+  fill-opacity: 0.2;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+#level-header {
+    position: fixed;
+    top: 5px;
+    width: 100%;
+    margin: 0 auto;
+    height: 25px;
+    text-align: center;
+    z-index: 5;
+}
+
+#level-footer {
+    position: fixed;
+    bottom: 16px;
+    width: 100%;
+    margin: 0 auto;
+    height: 25px;
+    text-align: center;
+    z-index: 5;
+}
+
+#element-name {
+  font-size: 16px;
+}
+
+#element-summary {
+  font-size: 12px;
+}
+
+#element-flavour {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.label-in, .label-out {
+    font-size: 8px;
+}
+
+.matrix-element {
+    stroke: gray;
+    stroke-width: 0.1px;
+}
+
+.matrix-element:hover {
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+div.tooltip {
+    position: fixed;
+    text-align: left;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: #000;
+    color: #ddd;
+    border: solid 1px #aaa;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 30;
+}
+
+.shadow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.stock .tile text {
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bold;
+    fill: #333;
+   -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+}
+.stock .tile.stock--available {
+    opacity: 1;
+}
+.stock .tile.stock--depleted {
+    opacity: 0.5;
+}
+
+.pearl {
+    cursor: pointer;
+}
+
+.pearl > circle {
+    fill: rgba(255, 255, 255, 0.2);
+    stroke: none;
+}
+.pearl:not(.pearl--passed):hover > circle {
+    fill: rgba(152, 230, 152, 0.3);
+}
+.pearl--passed > circle {
+    fill: rgba(255, 255, 255, 0.6);
+}
+.pearl--passed:hover > circle {
+    fill: rgba(152, 230, 152, 0.8);
+}
+
+.pearl > text {
+    font-size: 20px;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+.pearl:not(.pearl--current) > text {
+    opacity: 0.4;
+}
+.pearl.pearl-current > text {
+    opacity: 0.9;
+}
+.pearl:not(.pearl--passed) > text {
+    fill: #fff;
+}
+.pearl.pearl-passed > text {
+    fill: #4f569f;
+}
+
+.helper-hitbox {
+  fill: lightgreen;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.helper-hitbox:hover {
+  opacity: 0.2;
+}
+
+text.helper-name {
+  text-anchor: middle;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "Roboto Condensed";
+  fill: white;
+}
+
+text.helper-summary {
+  font-size: 24px;
+  font-family: "Roboto Condensed";
+  fill: white;
+}
+
+.board-hint {
+  cursor: pointer;
+}
+
+.board-hint > rect {
+  fill: #4f569f;
+  fill-opacity: 0.8;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+.board-hint > path {
+  fill: #4f569f;
+  fill-opacity: 0.8;
+  stroke: none;
+}
+
+.board-hint > text {
+  font-size: 24px;
+  fill: #fff;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.detection-bar-text {
+  font-size: 30px;
+  fill: #fff;
+  dominant-baseline: middle;
+  cursor: default;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  display: none;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup--shown {
+  display: table !important;
+}
+
+.popup-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.popup-window {
+  position: relative;
+  z-index: 10;
+  width: 50%;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 10px black;
+  padding: 2vh;
+  font-size: 3vh;
+  font-family: "Roboto Condensed";
+}
+
+.popup-buttons {
+  text-align: right;
+}
+.popup-buttons > button {
+  background-color: #4f569f;
+  border: none;
+  padding: 1vh 3vh;
+  font-size: 2vh;
+  color: white;
+}
+.popup-buttons .hidden {
+  display: none;
+}
+
+.interface-hint-overlay.hidden {
+  display: none;
+}
+.interface-hint-overlay rect {
+  fill: black;
+  fill-opacity: 0.7;
+}
+
+.interface-hint-overlay path {
+  fill: white;
+  fill-opacity: 0.4;
+}
+
+.interface-hint-overlay text {
+  fill: white;
+  font-size: 25px;
+  text-anchor: middle;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.unselectable {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

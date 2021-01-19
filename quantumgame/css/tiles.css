@@ -1,0 +1,179 @@
+rect.background-tile {
+  fill: #fff;
+  stroke-width: 4;
+  stroke: rgba(255, 255, 255, 0.4);
+}
+
+rect.frost-nonfrozen {
+  opacity: 0;
+}
+
+rect.frost-frozen {
+  fill: #aaa;
+  opacity: 0.3;
+}
+
+rect.hitbox {
+  fill: lightgreen;
+  cursor: pointer;
+  opacity: 0;
+}
+
+rect.hitbox-disabled {
+  fill: #EE9090;
+}
+
+rect.hitbox:hover {
+  opacity: 0.2;
+}
+
+path.triangular {
+  fill: #aaa;
+  stroke: none;
+  opacity: 0;
+}
+
+path.triangular:hover {
+  opacity: 1;
+}
+
+.particle {
+  fill: red;
+}
+
+.beam {
+  stroke: red;
+  stroke-width: 1.5px;
+}
+
+.absorption-text {
+  font-size: 30px;
+  text-anchor: end;
+}
+
+.element {
+  cursor: default;
+}
+
+.glass {
+  fill: steelblue;
+  fill-opacity: 0.5;
+}
+.glass-edge {
+  stroke: steelblue;
+  stroke-opacity: 1;
+  stroke-width: 2;
+}
+
+.metal {
+  fill: #222;
+}
+
+.metal-edge {
+  stroke: #666;
+  stroke-width: 2px;
+}
+
+.silver {
+  fill: lightgrey;
+}
+
+.dark-silver {
+  fill: #aaa;
+}
+
+.very-dark-silver {
+  fill: #666;
+}
+
+.absorber {
+  fill: black;
+  fill-opacity: 0.4;
+  stroke: #555;
+  stroke-width: 1;
+}
+
+.wire {
+  fill: none;
+  stroke: #6b00ff;
+  stroke-width: 3px;
+}
+
+.metal-case {
+  fill: none;
+  stroke: #222;
+  stroke-width: 4px;
+}
+
+.metal-case-hot {
+  fill: none;
+  stroke: red;
+  stroke-width: 4px;
+}
+
+.wire-back {
+  opacity: 0.5;
+  stroke-width: 4;
+}
+
+.eye {
+  stroke: #222;
+  stroke-width: 3px;
+  fill: white;
+}
+
+.eye-iris {
+  stroke: none;
+  fill: #222;
+}
+
+.lemon {
+  fill: #ffff00;
+  stroke: #ffa900;
+  stroke-width: 3px;
+}
+
+.gold-edge {
+  stroke: #ffa900;
+  stroke-width: 2;
+}
+
+.gold-edge-thick {
+  stroke: #ffa900;
+  stroke-width: 4;
+}
+
+.polarizer-side {
+  fill: gray;
+  fill-opacity: 0.5;
+}
+
+.detector-light-off {
+  fill: red;
+}
+
+.detector-light-on {
+  fill: lime;
+}
+
+.measurement-text {
+  text-anchor: middle;
+}
+
+text.stock-count {
+  text-anchor: end;
+  font-size: 24px;
+  stroke: #222;
+}
+
+.stock-empty > g.stock-dragged {
+  opacity: 1 !important;
+}
+
+.stock-empty > g > use.element, .stock-empty > text.stock-count {
+  opacity: 0.5;
+}
+
+.stock-empty > g > .hitbox {
+  fill: #EE9090;
+}
