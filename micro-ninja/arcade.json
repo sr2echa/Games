@@ -1,0 +1,30 @@
+﻿{
+	"name": "Micro Ninja",
+	"version": "1.0.0.0",
+	"description": "",
+	"id": "",
+	"viewport-width": 1708,
+	"viewport-height": 960,
+	"author": "",
+	"email": "",
+	"website": "",
+	"orientations": "landscape",
+	"c2version": "262",
+	"used-plugins": [
+		"Audio",
+		"Function",
+		"Keyboard",
+		"Particles",
+		"Sprite",
+		"Spritefont2",
+		"Tilemap",
+		"gamepad"
+	],
+	"used-behaviors": [
+		"Bullet",
+		"Physics",
+		"Platform",
+		"scrollto",
+		"solid"
+	]
+}
