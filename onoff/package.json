@@ -1,0 +1,29 @@
+{
+  "name": "js13k-2018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./bin/build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "http-server -op 1313 ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starzonmyarmz/js13k-2018.git"
+  },
+  "author": "Brad Dunbar <dunbarb2@gmail.com> (http://braddunbar.net/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starzonmyarmz/js13k-2018/issues"
+  },
+  "homepage": "https://github.com/starzonmyarmz/js13k-2018#readme",
+  "dependencies": {
+    "cssnano": "4.1.0",
+    "html-minifier": "3.5.20",
+    "http-server": "0.11.1",
+    "postcss-cli": "6.0.0",
+    "rollup": "0.65.0",
+    "uglify-es": "3.3.9"
+  }
+}

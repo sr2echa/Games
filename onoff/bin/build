@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+mkdir -p onoff
+postcss styles.css > onoff/styles.css
+html-minifier \
+  --collapse-whitespace \
+  --remove-comments \
+  --remove-attribute-quotes \
+  --remove-optional-tags \
+  --remove-tag-whitespace \
+  index.html > onoff/index.html
+rollup -f es index.js | uglifyjs -cm --toplevel > onoff/index.js
+zip onoff.zip onoff/*
+rm onoff/*
+unzip onoff.zip
+ls -lh onoff.zip
