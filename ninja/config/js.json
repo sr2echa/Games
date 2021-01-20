@@ -1,0 +1,49 @@
+[
+    "src/js/debug.js",
+    "src/js/globals.js",
+    "src/js/math.js",
+    "src/js/canvas-additions.js",
+
+    "src/js/util/resizer.js",
+    "src/js/util/interp.js",
+    "src/js/util/raycasting.js",
+    "src/js/util/array-utils.js",
+    "src/js/util/rng.js",
+    "src/js/util/format-time.js",
+    "src/js/util/loop.js",
+
+    "src/js/graphics/create-canvas.js",
+    "src/js/graphics/create-pattern.js",
+    "src/js/graphics/pad-canvas.js",
+    "src/js/graphics/font.js",
+    "src/js/graphics/assets.js",
+    "src/js/graphics/details.js",
+    "src/js/graphics/background.js",
+    "src/js/graphics/level-background.js",
+    "src/js/graphics/particle.js",
+    "src/js/graphics/menu.js",
+    "src/js/graphics/render-vision.js",
+    "src/js/graphics/create-character-body.js",
+
+    "src/js/elements/player.js",
+    "src/js/elements/exit.js",
+    "src/js/elements/player-spotter.js",
+    "src/js/elements/camera.js",
+    "src/js/elements/guard.js",
+    "src/js/elements/cycle.js",
+
+    "src/js/levels/level.js",
+    "src/js/levels/levels.js",
+
+    "src/js/sound/jsfxr.js",
+    "src/js/sound/sounds.js",
+
+    "src/js/keyboard.js",
+    "src/js/touch.js",
+    "src/js/gamepad.js",
+    "src/js/input.js",
+    "src/js/difficulty.js",
+    "src/js/game.js",
+    "src/js/social.js",
+    "src/js/main.js"
+]
